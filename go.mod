@@ -3,11 +3,13 @@ module golang-rest-api-template
 go 1.19
 
 require (
-	github.com/sahilchopra/gin-gonic-xss-middleware v0.0.0-20221014023455-d89f16de6a7e
 	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-contrib/secure v0.0.1
 	github.com/gin-gonic/gin v1.9.1
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/golang-jwt/jwt v3.2.2+incompatible
+	github.com/joho/godotenv v1.5.1
+	github.com/sahilchopra/gin-gonic-xss-middleware v0.0.0
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
 	github.com/swaggo/swag v1.16.2
@@ -34,7 +36,6 @@ require (
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.15.1 // indirect
-	github.com/go-redis/redis/v8 v8.11.5 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/gorilla/css v1.0.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect

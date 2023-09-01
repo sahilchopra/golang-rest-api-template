@@ -2,8 +2,7 @@ package models
 
 import (
 	"fmt"
-	"os"
-
+	"golang-rest-api-template/env"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -11,11 +10,11 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	db_hostname := os.Getenv("POSTGRES_HOST")
-	db_name := os.Getenv("POSTGRES_DB")
-	db_user := os.Getenv("POSTGRES_USER")
-	db_pass := os.Getenv("POSTGRES_PASSWORD")
-	db_port := os.Getenv("POSTGRES_PORT")
+	db_hostname := env.PostgresHost()
+	db_name := env.PostgresDBName()
+	db_user := env.PostgresUser()
+	db_pass := env.PostgresPassword()
+	db_port := env.PostgresPort()
 
 	dbURl := fmt.Sprintf("postgres://%s:%s@%s:%s/%s", db_user, db_pass, db_hostname, db_port, db_name)
 	database, err := gorm.Open(postgres.Open(dbURl), &gorm.Config{})
